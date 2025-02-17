@@ -55,7 +55,9 @@
     "vectordbs",
     "Weaviate",
     "XAILLM",
-    "Zilliz"
+    "Zilliz",
+    "TNaut",
+    "LLMS"
   ],
   "eslint.experimental.useFlatConfig": true,
   "docker.languageserver.formatter.ignoreMultilineInstructions": true

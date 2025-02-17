@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 /**
  * File Attachment for automatic upload on the chat container page.
  * @typedef Attachment
@@ -128,6 +129,9 @@ function getLLMProvider({ provider = null, model = null } = {}) {
     case "azure":
       const { AzureOpenAiLLM } = require("../AiProviders/azureOpenAi");
       return new AzureOpenAiLLM(embedder, model);
+    case "tnaut":
+      const { TNautLLM } = require("../AiProviders/tnaut");
+      return new TNautLLM(embedder, model);
     case "anthropic":
       const { AnthropicLLM } = require("../AiProviders/anthropic");
       return new AnthropicLLM(embedder, model);
@@ -269,6 +273,9 @@ function getLLMProviderClass({ provider = null } = {}) {
     case "azure":
       const { AzureOpenAiLLM } = require("../AiProviders/azureOpenAi");
       return AzureOpenAiLLM;
+    case "tnaut":
+      const { TNautLLM } = require("../AiProviders/tnaut");
+      return TNautLLM;
     case "anthropic":
       const { AnthropicLLM } = require("../AiProviders/anthropic");
       return AnthropicLLM;

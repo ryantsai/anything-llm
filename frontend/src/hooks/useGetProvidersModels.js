@@ -77,6 +77,7 @@ const groupedProviders = [
   "openai",
   "novita",
   "openrouter",
+  "tnaut",
 ];
 export default function useGetProviderModels(provider = null) {
   const [defaultModels, setDefaultModels] = useState([]);

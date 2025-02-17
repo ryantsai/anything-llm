@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import OpenAiLogo from "@/media/llmprovider/openai.png";
 import GenericOpenAiLogo from "@/media/llmprovider/generic-openai.png";
 import AzureOpenAiLogo from "@/media/llmprovider/azure.png";
+import TNautLogo from "@/media/llmprovider/azure.png";
 import AnthropicLogo from "@/media/llmprovider/anthropic.png";
 import GeminiLogo from "@/media/llmprovider/gemini.png";
 import OllamaLogo from "@/media/llmprovider/ollama.png";
@@ -50,6 +51,7 @@ import ApiPieLLMOptions from "@/components/LLMSelection/ApiPieOptions";
 import NovitaLLMOptions from "@/components/LLMSelection/NovitaLLMOptions";
 import XAILLMOptions from "@/components/LLMSelection/XAiLLMOptions";
 import NvidiaNimOptions from "@/components/LLMSelection/NvidiaNimOptions";
+import TNautOptions from "@/components/LLMSelection/TNautOptions";
 
 import LLMItem from "@/components/LLMSelection/LLMItem";
 import System from "@/models/system";
@@ -72,6 +74,13 @@ const LLMS = [
     logo: AzureOpenAiLogo,
     options: (settings) => <AzureAiOptions settings={settings} />,
     description: "The enterprise option of OpenAI hosted on Azure services.",
+  },
+  {
+    name: "TNaut",
+    value: "tnaut",
+    logo: TNautLogo,
+    options: (settings) => <TNautOptions settings={settings} />,
+    description: "Wrapper for Azure OpenAI",
   },
   {
     name: "Anthropic",

@@ -30,6 +30,7 @@ import DeepSeekLogo from "@/media/llmprovider/deepseek.png";
 import APIPieLogo from "@/media/llmprovider/apipie.png";
 import XAILogo from "@/media/llmprovider/xai.png";
 import NvidiaNimLogo from "@/media/llmprovider/nvidia-nim.png";
+import TNautLogo from "@/media/llmprovider/azure.png";
 
 import PreLoader from "@/components/Preloader";
 import OpenAiOptions from "@/components/LLMSelection/OpenAiOptions";
@@ -57,6 +58,7 @@ import DeepSeekOptions from "@/components/LLMSelection/DeepSeekOptions";
 import ApiPieLLMOptions from "@/components/LLMSelection/ApiPieOptions";
 import XAILLMOptions from "@/components/LLMSelection/XAiLLMOptions";
 import NvidiaNimOptions from "@/components/LLMSelection/NvidiaNimOptions";
+import TNautOptions from "@/components/LLMSelection/TNautOptions";
 
 import LLMItem from "@/components/LLMSelection/LLMItem";
 import { CaretUpDown, MagnifyingGlass, X } from "@phosphor-icons/react";
@@ -78,6 +80,14 @@ export const AVAILABLE_LLM_PROVIDERS = [
     options: (settings) => <AzureAiOptions settings={settings} />,
     description: "The enterprise option of OpenAI hosted on Azure services.",
     requiredConfig: ["AzureOpenAiEndpoint"],
+  },
+  {
+    name: "TNaut",
+    value: "tnaut",
+    logo: TNautLogo,
+    options: (settings) => <TNautOptions settings={settings} />,
+    description: "Wrapper for OpenAI.",
+    requiredConfig: ["TNautEndpoint"],
   },
   {
     name: "Anthropic",

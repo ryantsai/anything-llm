@@ -45,6 +45,37 @@ const KEY_MAPPING = {
     ],
   },
 
+  // TNaut Settings
+  TNautEndpoint: {
+    envKey: "TNAUT_ENDPOINT",
+    checks: [isNotEmpty],
+  },
+  TNautTokenLimit: {
+    envKey: "TNAUT_TOKEN_LIMIT",
+    checks: [validOpenAiTokenLimit],
+  },
+  TNautKey: {
+    envKey: "TNAUT_KEY",
+    checks: [isNotEmpty],
+  },
+  TNautModelPref: {
+    envKey: "OPEN_MODEL_PREF",
+    checks: [isNotEmpty],
+  },
+  TNautEmbeddingModelPref: {
+    envKey: "EMBEDDING_MODEL_PREF",
+    checks: [isNotEmpty],
+  },
+  TNautModelType: {
+    envKey: "TNAUT_MODEL_TYPE",
+    checks: [
+      (input) =>
+        ["default", "reasoning"].includes(input)
+          ? null
+          : "Invalid model type. Must be one of: default, reasoning.",
+    ],
+  },
+
   // Anthropic Settings
   AnthropicApiKey: {
     envKey: "ANTHROPIC_API_KEY",

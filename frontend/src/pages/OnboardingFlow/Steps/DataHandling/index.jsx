@@ -25,6 +25,7 @@ import AWSBedrockLogo from "@/media/llmprovider/bedrock.png";
 import DeepSeekLogo from "@/media/llmprovider/deepseek.png";
 import APIPieLogo from "@/media/llmprovider/apipie.png";
 import XAILogo from "@/media/llmprovider/xai.png";
+import TNautLogo from "@/media/llmprovider/azure.png";
 
 import CohereLogo from "@/media/llmprovider/cohere.png";
 import ZillizLogo from "@/media/vectordbs/zilliz.png";
@@ -58,6 +59,14 @@ export const LLM_SELECTION_PRIVACY = {
       "Your text and embedding text are not visible to OpenAI or Microsoft",
     ],
     logo: AzureOpenAiLogo,
+  },
+  tnaut: {
+    name: "TNaut",
+    description: [
+      "Your chats will not be used for training",
+      "Your text and embedding text are not visible to TNaut",
+    ],
+    logo: TNautLogo,
   },
   anthropic: {
     name: "Anthropic",

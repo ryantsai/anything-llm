@@ -559,6 +559,14 @@ const SystemSettings = {
       NvidiaNimLLMBasePath: process.env.NVIDIA_NIM_LLM_BASE_PATH,
       NvidiaNimLLMModelPref: process.env.NVIDIA_NIM_LLM_MODEL_PREF,
       NvidiaNimLLMTokenLimit: process.env.NVIDIA_NIM_LLM_MODEL_TOKEN_LIMIT,
+
+      // TNaut Keys
+      TNautEndpoint: process.env.TNAUT_ENDPOINT,
+      TNautKey: !!process.env.TNAUT_KEY,
+      TNautModelPref: process.env.OPEN_MODEL_PREF,
+      TNautEmbeddingModelPref: process.env.EMBEDDING_MODEL_PREF,
+      TNautTokenLimit: process.env.TNAUT_TOKEN_LIMIT || 4096,
+      TNautModelType: process.env.TNAUT_MODEL_TYPE || "default",
     };
   },
 
