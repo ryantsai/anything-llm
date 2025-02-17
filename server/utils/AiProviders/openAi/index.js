@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 const { NativeEmbedder } = require("../../EmbeddingEngines/native");
 const {
   handleDefaultStreamResponseV2,
